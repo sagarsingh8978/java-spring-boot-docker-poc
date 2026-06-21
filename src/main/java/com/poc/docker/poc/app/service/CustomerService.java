@@ -1,6 +1,6 @@
-package com.poc.git.actions.demo.service;
+package com.poc.docker.poc.app.service;
 
-import com.poc.git.actions.demo.model.Customer;
+import com.poc.docker.poc.app.model.Customer;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

@@ -1,6 +1,6 @@
-package com.poc.git.actions.demo.controller;
-import com.poc.git.actions.demo.model.Customer;
-import com.poc.git.actions.demo.service.CustomerService;
+package com.poc.docker.poc.app.controller;
+import com.poc.docker.poc.app.model.Customer;
+import com.poc.docker.poc.app.service.CustomerService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

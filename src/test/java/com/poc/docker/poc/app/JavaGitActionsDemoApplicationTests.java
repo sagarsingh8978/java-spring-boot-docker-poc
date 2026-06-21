@@ -1,4 +1,4 @@
-package com.poc.git.actions.demo;
+package com.poc.docker.poc.app;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,4 +1,4 @@
-package com.poc.git.actions.demo;
+package com.poc.docker.poc.app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

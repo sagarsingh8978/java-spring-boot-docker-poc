@@ -5,7 +5,7 @@ plugins {
 	id 'jacoco' // Keep JaCoCo! It works flawlessly with Gradle 9
 }
 
-group = 'com.github.actions'
+group = 'com.poc.docker.poc.app'
 version = '0.0.1-SNAPSHOT'
 
 java {
