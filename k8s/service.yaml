@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: customer-app-service   # 🟢 UNIQUE: The name of this Service object inside the cluster
+spec:
+  #type: NodePort               # ⚙️ TYPE: Tells K8s to open a physical port on your actual laptop
+  type: ClusterIP               # 🟢 CHANGED: More secure, internal-only IP
+  selector:
+    app: customer-api-service      # 🔴 CRITICAL MATCH: This must match the exact Pod label string from your deployment!
+  ports:
+    - protocol: TCP
+      port: 8081               # 🔵 INTERNAL SERVICE PORT: Used if other apps inside the cluster want to talk to this service
+      targetPort: 8081         # 🟡 CONTAINER PORT: The port your Spring Boot app is listening on inside the container
+      #nodePort: 30081          # 🟢 EXTERNAL HOST PORT: The port opened on your actual physical laptop

@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: customer-api-deployment
+  labels:
+    app: customer-api-service
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: customer-api-service
+  template:
+    metadata:
+      labels:
+        app: customer-api-service
+    spec:
+      containers:
+      - name: customer-app-container
+        image: ghcr.io/sagarsingh8978/customer-service-app:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8081

@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: customer-api-ingress
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+spec:
+  rules:
+    - host: customer-api-ingress.local  # 🌟 THE DOMAIN NAME YOU WILL TYPE IN BROWSER
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: customer-app-service # 🔴 MUST MATCH your Service metadata.name exactly!
+                port:
+                  number: 8081             # 🔵 MUST MATCH your Service internal port!
